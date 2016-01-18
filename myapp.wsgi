@@ -506,6 +506,6 @@ def pupsDelete(pup_id):
     return render_template('pupsdelete.html', pup_id = pup_id, puppy = pupToDelete)
 
 if __name__ == '__main__':
-    app.secret_key = 'super_secret_key'
+    #app.secret_key = 'super_secret_key'
     app.debug = True
     app.run()
