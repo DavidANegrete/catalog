@@ -196,9 +196,11 @@ def gconnect():
 
 
 
-@app.route("/")
+@app.route('/')
+@app.route('/pups/')
+def pups():
+    return render_template('pupshome.html')
 
-def hello():
-    return "Hello, I love Digital Ocean!"
+
 if __name__ == "__main__":
     app.run()
