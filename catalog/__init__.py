@@ -7,22 +7,7 @@ from flask import flash
 from flask import jsonify
 from sqlalchemy import create_engine, and_
 from sqlalchemy.orm import sessionmaker
-from puppy_db_setup import Base, Shelter, Puppy,User 
-from puppy_db_setup import UserAndPuppy, User, NewFamily
-from flask import session as login_session
-from werkzeug import secure_filename
-from functools import wraps
-import os
-import random
-import string
-from oauth2client.client import flow_from_clientsecrets
-from oauth2client.client import FlowExchangeError
-import httplib2
-import json
-from flask import make_response
-import requests
-from pup_methods import *
-import logging
+
 
 app = Flask(__name__)
 
