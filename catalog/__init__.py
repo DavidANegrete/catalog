@@ -45,6 +45,20 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 #DBSession = sessionmaker(bind = engine)
 #session = DBSession()
 
+#pupQuery = session.query(Puppy)
+#shelterQuery = session.query(Shelter)
+#userQuery = session.query(User)
+#queryPupnShelter = session.query(Puppy, Shelter)
+
+# Decorator function to keep views accisible by some only.
+def logInDecorator(f):
+    @wraps(f)
+    def wrapper(*args, **kwds):
+        if 'username' not in login_session:
+            return redirect (url_for('showLogin', next = request.url))
+        return f(*args, **kwds)
+    return wrapper
+
 @app.route("/")
 
 def hello():
