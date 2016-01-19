@@ -24,9 +24,26 @@ import requests
 from pup_methods import *
 import logging
 
+# Constants for uploads
+UPLOAD_FOLDER = 'static/images/uploads'
+ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
 
 app = Flask(__name__)
 
+# setting up the upload folder for the images
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
+# Cross check Authentication
+CLIENT_ID = json.loads(
+    open('client_secrets.json', 'r').read())['web']['client_id']
+APPLICATION_NAME = "Pups in the City"
+
+# Connect to the Database and session
+#engine = create_engine('sqlite:///puppyshelterwithusers.db')
+#Base.metadata.bind = engine
+
+#DBSession = sessionmaker(bind = engine)
+#session = DBSession()
 
 @app.route("/")
 
