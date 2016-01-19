@@ -21,7 +21,7 @@ import httplib2
 import json
 from flask import make_response
 import requests
-from pup_methods import *
+#from pup_methods import *
 import logging
 
 # Constants for uploads
