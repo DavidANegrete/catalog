@@ -34,9 +34,9 @@ app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 # Cross check Authentication
-CLIENT_ID = json.loads(
-    open('client_secrets.json', 'r').read())['web']['client_id']
-APPLICATION_NAME = "Pups in the City"
+#CLIENT_ID = json.loads(
+ #   open('client_secrets.json', 'r').read())['web']['client_id']
+#APPLICATION_NAME = "Pups in the City"
 
 # Connect to the Database and session
 #engine = create_engine('sqlite:///puppyshelterwithusers.db')
