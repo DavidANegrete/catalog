@@ -45,15 +45,15 @@
       <div class="container">
         <div class="masthead">
           <div id ="navigation" >
-            <!--{%if page != 'login' %} -->
+  <!--          {%if page != 'login' %}
             <div class ="col-me-6 text-right">
-             <!-- {%if 'username' not in session %} -->
-             <!-- <a class="btn btn-default" id="iobutton" role="button" href="{{url_for('showLogin')}}" id="">Click to log in</a>
+              {%if 'username' not in session %}
+              <a class="btn btn-default" id="iobutton" role="button" href="{{url_for('showLogin')}}" id="">Click to log in</a>
               {% else %}
               <a class="btn btn-success" id="iobutton"role="button" href="{{url_for('disconnect')}}">Click here to log out</a>
               {% endif %}
             {% endif %}
-            </div> -->
+            </div>
             {% block nav %}
             <nav>
               <ul class="nav nav-justified">
@@ -70,7 +70,7 @@
         <!--Flash messages when CRUD activity has occured the database -->
         
         
-        <div class = '' role="">
+  <!--     <div class = '' role="">
           {% with messages = get_flashed_messages() %}
           {% if messages %}
           {% for message in messages %}
@@ -96,8 +96,8 @@
         <br>
                 
         <!-- Empty conent area template -->
-        {% block content %}
-        {% endblock %}
+       <!--  {% block content %}
+        {% endblock %} -->
 
 			  <div id="footer">
           {% block footer %}
