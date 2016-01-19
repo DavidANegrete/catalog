@@ -29,6 +29,14 @@ import logging
 
 app = Flask(__name__)
 
+# Connect to the Database and session
+engine = psycopg2.connect('sqlite:///puppyshelterwithusers.db')
+Base.metadata.bind = engine
+
+DBSession = sessionmaker(bind = engine)
+session = DBSession()
+
+
 @app.route("/")
 def hello():
     return "Hello, I love Digital Ocean!"
